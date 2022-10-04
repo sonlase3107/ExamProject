@@ -1,0 +1,17 @@
+<div class="main-container">
+    <header class="header header-6">
+        <app-header class="header-6"></app-header>
+    </header>
+
+    <div class="content-container">
+        <div class="side-bar-area">
+            <app-side-bar></app-side-bar>
+        </div>
+        <div class="content-area">
+            <div class="search-area">
+                <app-search-bar (searchText)="searchTextEmit($event)"></app-search-bar>
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

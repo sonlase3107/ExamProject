@@ -1,0 +1,25 @@
+<div id="layout-lib">
+    <div class="content">
+        <div class="grid-content">
+            <div class="row">
+                <div class="title-slide">
+                    <span class="material-icons font-icon-up">
+                        moving
+                    </span>
+                    <span class="title-bar">Result</span>
+                </div>
+                <div class="column">
+                    <div *ngFor="let i of listVideoResult">
+                        <app-card [videoObject]="i"></app-card>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container">
+    <ng-template #dynamic></ng-template>
+</div>
+<button (click)="add()">Check</button> -->

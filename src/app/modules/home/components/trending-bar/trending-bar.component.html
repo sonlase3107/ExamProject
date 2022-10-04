@@ -1,0 +1,35 @@
+<div class="clr-row">
+    <div class="title-slide">
+        <span class="material-icons font-icon-up">
+            moving
+        </span>
+        <span class="title-bar">Trending</span>
+    </div>
+    <div class="arrow-left-area">
+        <span class="expand-gif">All The Gifs</span>
+        <span>
+            <span class="material-icons">
+                navigate_next
+            </span>
+        </span>
+    </div>
+    <div class="arrow-symbol">
+        <span class="left-arrow" (click)="changeStateSlide(1)" [hidden]="indexSlide==0">
+            <span class="material-icons">
+                chevron_left
+            </span>
+        </span>
+        <span class="right-arrow" (click)="changeStateSlide(2)">
+            <span class="material-icons">
+                chevron_right
+            </span>
+        </span>
+    </div>
+    <div class="grid-row" #barslide>
+        <div *ngFor="let i of videos" class="card-layout" (click)="goToGifDetail(i.id)">
+            <div class="card-img" [id]="i.id">
+                <img [src]="i.imgSrc" [alt]="i.id">
+            </div>
+        </div>
+    </div>
+</div>
